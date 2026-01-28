@@ -28,9 +28,8 @@
     "APP_DEBUG": "true",
     "DB_CONNECTION": "sqlite",
     "DB_DATABASE": "/tmp/database.sqlite",
-    "SESSION_DRIVER": "cookie",
-    "CACHE_DRIVER": "array",
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
-    "APP_STORAGE": "/tmp/storage"
+    "SESSION_DRIVER": "cookie",
+    "LOG_CHANNEL": "stderr"
 }
 }
