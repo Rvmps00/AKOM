@@ -1,29 +1,24 @@
 <?php
 
-// 1. Define paths in the writable /tmp directory
+// 1. Setup the writable /tmp environment
 $tmpStorage = '/tmp/storage';
-$folders = [
-    $tmpStorage . '/framework/sessions',
-    $tmpStorage . '/framework/views',
-    $tmpStorage . '/framework/cache',
-    $tmpStorage . '/logs',
-];
-
-// 2. Create the folders if they don't exist
-foreach ($folders as $folder) {
-    if (!is_dir($folder)) {
-        mkdir($folder, 0777, true);
+foreach (['/framework/views', '/framework/sessions', '/framework/cache', '/logs'] as $path) {
+    if (!is_dir($tmpStorage . $path)) {
+        mkdir($tmpStorage . $path, 0777, true);
     }
 }
 
-// 3. Ensure the SQLite database file exists in /tmp
-$dbPath = '/tmp/database.sqlite';
-if (!file_exists($dbPath)) {
-    touch($dbPath);
+// 2. Fix for "Target class [view] does not exist"
+// This manually registers the view engine if the auto-discovery fails on Vercel
+putenv('VIEW_COMPILED_PATH=/tmp/storage/framework/views');
+
+// 3. Create SQLite file if missing
+if (!file_exists('/tmp/database.sqlite')) {
+    touch('/tmp/database.sqlite');
 }
 
-// 4. Suppress PHP 8.5 deprecation warnings
+// 4. Suppress Warnings
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 
-// 5. Route to the real Laravel index
+// 5. Load Laravel
 require __DIR__ . '/../public/index.php';
