@@ -7,7 +7,12 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 
+use Illuminate\Support\Facades\Artisan;
 
+Route::get('/init-db', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return "Database initialized!";
+});
 
 
 // Route for landing page
