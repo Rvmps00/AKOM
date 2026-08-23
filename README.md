@@ -1,66 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# AKOM - Company Portfolio & Contact Portal
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite">
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 </p>
 
-## About Laravel
+## 🚀 About AKOM
+AKOM is an IT solutions provider that specializes in building end-to-end technological solutions ranging from custom software and web applications to mobile apps and Internet of Things (IoT) devices. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This repository contains the source code for our company portfolio and contact website. It serves as our digital storefront, allowing potential clients to explore our past projects, understand our technical capabilities, and reach out to us directly for business inquiries. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The AKOM startup was originally founded and developed by a dedicated team of students between **2024 and 2025**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 💡 Core Services
+We pride ourselves on versatility and engineering excellence. Our core offerings include:
+- **Custom Software Development:** Tailor-made software solutions designed to solve complex business problems and optimize workflows.
+- **Web Applications:** Scalable, responsive, and secure web platforms built with modern, high-performance frameworks.
+- **Mobile Applications:** Intuitive mobile experiences bridging the gap between businesses and their users on the go.
+- **IoT (Internet of Things) Solutions:** Smart device integration, custom hardware-software communication protocols, and automated connected systems.
 
-## Learning Laravel
+## 🛠 Tech Stack
+This project is built on a modern, robust, and scalable stack:
+- **Backend:** [Laravel](https://laravel.com) (PHP Web Framework)
+- **Frontend Styling:** [Tailwind CSS](https://tailwindcss.com) (Utility-first CSS framework)
+- **Build Tool:** [Vite](https://vitejs.dev/) (Next Generation Frontend Tooling)
+- **Database:** Configurable via `.env` (MySQL / PostgreSQL / SQLite)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 💻 Local Development Setup
+To run the AKOM website locally on your machine, follow these steps:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **Clone the repository** (if you haven't already)
+   ```bash
+   # Make sure you are in the project directory
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Install PHP Dependencies**
+   ```bash
+   composer install
+   ```
 
-## Laravel Sponsors
+3. **Install NPM Dependencies**
+   ```bash
+   npm install
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. **Environment Setup**
+   Copy the example environment file and configure your local database settings:
+   ```bash
+   cp .env.example .env
+   ```
 
-### Premium Partners
+5. **Generate Application Key**
+   ```bash
+   php artisan key:generate
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+6. **Run Database Migrations**
+   ```bash
+   php artisan migrate
+   ```
 
-## Contributing
+7. **Start the Development Servers**
+   You will need to run both the Laravel backend server and the Vite frontend compiler:
+   
+   ```bash
+   # Terminal 1: Start Laravel local server
+   php artisan serve
+   ```
+   
+   ```bash
+   # Terminal 2: Start Vite to watch and compile assets
+   npm run dev
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📬 Contact Us
+Interested in working with us or have a project in mind? You can reach us directly through the contact form integrated into this website. We are always looking forward to taking on new and exciting technical challenges.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+*Built with ❤️ by the AKOM Team (2024 - 2025)*
